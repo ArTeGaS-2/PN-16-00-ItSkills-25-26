@@ -3,13 +3,14 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="Step" sid="434645708188938" static="0" type="number">1000</variable>
         <variable constant="0" name="Money" sid="334043399510809" static="0" type="number">0</variable>
         <event-block sid="344598234163455">
             <conditions>
                 <condition id="6" name="On object clicked" sid="214886789626040" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">Sprite2</param>
+                    <param id="2" name="Object clicked">ButtonClick</param>
                 </condition>
             </conditions>
             <actions>
@@ -20,7 +21,7 @@
                 <action id="0" name="Set text" sid="386219340264492" type="Text">
                     <param id="0" name="Text">&quot;Гривень: &quot; &amp; Money</param>
                 </action>
-                <action id="-7" name="Set size" sid="819141101678509" type="Sprite2">
+                <action id="-7" name="Set size" sid="819141101678509" type="ButtonClick">
                     <param id="0" name="Width">120</param>
                     <param id="1" name="Height">120</param>
                 </action>
@@ -33,9 +34,40 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-7" name="Set size" sid="142395737529344" type="Sprite2">
+                <action id="-7" name="Set size" sid="142395737529344" type="ButtonClick">
                     <param id="0" name="Width">150</param>
                     <param id="1" name="Height">150</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="751062523266290">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="931903555318343" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">ShopButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="202697172639439" type="ButtonClick">
+                    <param id="0" name="Y">ButtonClick.Y + Step</param>
+                </action>
+                <action id="-2" name="Set Y" sid="644933461420298" type="Sprite">
+                    <param id="0" name="Y">Sprite.Y - Step</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="856668509676957">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="347873306874797" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="612252386909402" type="ButtonClick">
+                    <param id="0" name="Y">ButtonClick.Y - Step</param>
                 </action>
             </actions>
         </event-block>
