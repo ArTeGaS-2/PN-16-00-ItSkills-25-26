@@ -49,11 +49,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Set Y" sid="202697172639439" type="ButtonClick">
-                    <param id="0" name="Y">ButtonClick.Y + Step</param>
+                <action id="4" name="Set animation" sid="415412839433908" type="ShopButton">
+                    <param id="0" name="Animation">&quot;Temp&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
-                <action id="-2" name="Set Y" sid="644933461420298" type="Sprite">
-                    <param id="0" name="Y">Sprite.Y - Step</param>
+                <action behavior="Timer" id="0" name="Start timer" sid="380179828750817" type="ShopButton">
+                    <param id="0" name="Duration">0.2</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;sb&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -68,6 +71,34 @@
             <actions>
                 <action id="-2" name="Set Y" sid="612252386909402" type="ButtonClick">
                     <param id="0" name="Y">ButtonClick.Y - Step</param>
+                </action>
+                <action id="-2" name="Set Y" sid="730877557010945" type="Sprite">
+                    <param id="0" name="Y">Sprite.Y + Step</param>
+                </action>
+                <action id="-2" name="Set Y" sid="860769156922273" type="ShopButton">
+                    <param id="0" name="Y">ShopButton.Y - Step</param>
+                </action>
+                <action id="4" name="Set animation" sid="735036865156020" type="ShopButton">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="319363564014911">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="455632638028854" type="ShopButton">
+                    <param id="0" name="Tag">&quot;sb&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="202697172639439" type="ButtonClick">
+                    <param id="0" name="Y">ButtonClick.Y + Step</param>
+                </action>
+                <action id="-2" name="Set Y" sid="644933461420298" type="Sprite">
+                    <param id="0" name="Y">Sprite.Y - Step</param>
+                </action>
+                <action id="-2" name="Set Y" sid="962099567989587" type="ShopButton">
+                    <param id="0" name="Y">ShopButton.Y + Step</param>
                 </action>
             </actions>
         </event-block>
