@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="0" name="CoinsPerSecond" sid="435960930622178" static="0" type="number">1000</variable>
+        <variable constant="0" name="CoinsPerSecond" sid="435960930622178" static="0" type="number">0</variable>
         <variable constant="0" name="CoinsPerClick" sid="990311986245931" static="0" type="number">1</variable>
         <variable constant="0" name="Step" sid="434645708188938" static="0" type="number">1000</variable>
         <variable constant="0" name="Money" sid="334043399510809" static="0" type="number">0</variable>
@@ -20,7 +20,7 @@
                     <param id="0" name="Variable">Money</param>
                     <param id="1" name="Value">CoinsPerClick</param>
                 </action>
-                <action id="0" name="Set text" sid="386219340264492" type="Text">
+                <action id="0" name="Set text" sid="386219340264492" type="CoinsCounter">
                     <param id="0" name="Text">&quot;Гривень: &quot; &amp; Money</param>
                 </action>
                 <action id="-7" name="Set size" sid="819141101678509" type="ButtonClick">
@@ -67,15 +67,15 @@
                 <condition id="6" name="On object clicked" sid="347873306874797" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">Sprite</param>
+                    <param id="2" name="Object clicked">CloseShopButton</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Set Y" sid="612252386909402" type="ButtonClick">
                     <param id="0" name="Y">ButtonClick.Y - Step</param>
                 </action>
-                <action id="-2" name="Set Y" sid="730877557010945" type="Sprite">
-                    <param id="0" name="Y">Sprite.Y + Step</param>
+                <action id="-2" name="Set Y" sid="730877557010945" type="CloseShopButton">
+                    <param id="0" name="Y">CloseShopButton.Y + Step</param>
                 </action>
                 <action id="-2" name="Set Y" sid="860769156922273" type="ShopButton">
                     <param id="0" name="Y">ShopButton.Y - Step</param>
@@ -84,8 +84,8 @@
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="-2" name="Set Y" sid="993581291122753" type="Sprite2">
-                    <param id="0" name="Y">Sprite2.Y + Step</param>
+                <action id="-2" name="Set Y" sid="993581291122753" type="PlusOnePerClick">
+                    <param id="0" name="Y">PlusOnePerClick.Y + Step</param>
                 </action>
             </actions>
         </event-block>
@@ -99,14 +99,14 @@
                 <action id="-2" name="Set Y" sid="202697172639439" type="ButtonClick">
                     <param id="0" name="Y">ButtonClick.Y + Step</param>
                 </action>
-                <action id="-2" name="Set Y" sid="644933461420298" type="Sprite">
-                    <param id="0" name="Y">Sprite.Y - Step</param>
+                <action id="-2" name="Set Y" sid="644933461420298" type="CloseShopButton">
+                    <param id="0" name="Y">CloseShopButton.Y - Step</param>
                 </action>
                 <action id="-2" name="Set Y" sid="962099567989587" type="ShopButton">
                     <param id="0" name="Y">ShopButton.Y + Step</param>
                 </action>
-                <action id="-2" name="Set Y" sid="585865503970464" type="Sprite2">
-                    <param id="0" name="Y">Sprite2.Y - Step</param>
+                <action id="-2" name="Set Y" sid="585865503970464" type="PlusOnePerClick">
+                    <param id="0" name="Y">PlusOnePerClick.Y - Step</param>
                 </action>
             </actions>
         </event-block>
@@ -115,7 +115,7 @@
                 <condition id="6" name="On object clicked" sid="937988325386699" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">Sprite2</param>
+                    <param id="2" name="Object clicked">PlusOnePerClick</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="153761323029956" type="System">
                     <param id="0" name="Variable">Money</param>
@@ -128,14 +128,14 @@
                     <param id="0" name="Variable">CoinsPerClick</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="0" name="Set text" sid="380512178435241" type="Text2">
-                    <param id="0" name="Text">&quot;+&quot; &amp; CoinsPerClick &amp; &quot; за клік&quot;</param>
+                <action id="0" name="Set text" sid="380512178435241" type="CoinsPerClickText">
+                    <param id="0" name="Text">&quot;+ &quot; &amp; CoinsPerClick &amp; &quot; за клік&quot;</param>
                 </action>
                 <action id="-10" name="Add to" sid="676646826227871" type="System">
                     <param id="0" name="Variable">Money</param>
                     <param id="1" name="Value">-25</param>
                 </action>
-                <action id="0" name="Set text" sid="804283652168179" type="Text">
+                <action id="0" name="Set text" sid="804283652168179" type="CoinsCounter">
                     <param id="0" name="Text">&quot;Гривень: &quot; &amp; Money</param>
                 </action>
             </actions>
@@ -151,7 +151,7 @@
                     <param id="0" name="Variable">Money</param>
                     <param id="1" name="Value">CoinsPerSecond</param>
                 </action>
-                <action id="0" name="Set text" sid="503895354620271" type="Text">
+                <action id="0" name="Set text" sid="503895354620271" type="CoinsCounter">
                     <param id="0" name="Text">&quot;Гривень: &quot; &amp; Money</param>
                 </action>
             </actions>
