@@ -143,7 +143,7 @@
         <event-block sid="413694352184652">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="105253742804644" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
+                    <param id="0" name="Interval (seconds)">0.1</param>
                 </condition>
             </conditions>
             <actions>
@@ -152,6 +152,36 @@
                     <param id="1" name="Value">CoinsPerSecond</param>
                 </action>
                 <action id="0" name="Set text" sid="503895354620271" type="CoinsCounter">
+                    <param id="0" name="Text">&quot;Гривень: &quot; &amp; Money</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="396906574110200">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="439510204979858" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PlusOnePerAuto</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="138433343426343" type="System">
+                    <param id="0" name="Variable">Money</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="111373222524185" type="System">
+                    <param id="0" name="Variable">CoinsPerSecond</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+                <action id="0" name="Set text" sid="331615569688955" type="Text">
+                    <param id="0" name="Text">&quot;+ &quot; &amp; round(CoinsPerSecond * 10) / 10 &amp; &quot; Авто&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="484499945444486" type="System">
+                    <param id="0" name="Variable">Money</param>
+                    <param id="1" name="Value">-25</param>
+                </action>
+                <action id="0" name="Set text" sid="766389134614309" type="CoinsCounter">
                     <param id="0" name="Text">&quot;Гривень: &quot; &amp; Money</param>
                 </action>
             </actions>
