@@ -128,7 +128,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text" sid="864634659602381">
+        <object-type name="CoinsPerAutoText" sid="864634659602381">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ClickPrice" sid="498446852805519">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AutoPrice" sid="680378126280232">
             <plugin id="Text" />
         </object-type>
     </object-folder>
